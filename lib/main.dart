@@ -1,4 +1,6 @@
+import 'package:app1/stacked_icons.dart';
 import 'package:flutter/material.dart';
+import 'login.dart';
 
 void main() =>runApp(MyApp());
 
@@ -85,16 +87,21 @@ class HomePage extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(left:20.0,right: 20.0,top: 10.0),
-                    child: new Container(
-                      alignment: Alignment.center,
-                      height: 60.0,
-                      decoration: new BoxDecoration(
-                          color: Color(0xFF18D191),
-                           borderRadius: new BorderRadius.circular(10.0)
-                      ),
-                      child:  Text("Sign In With Email",
-                           style: TextStyle(fontSize: 20.0,color: Colors.white),
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                      },
+                      child: new Container(
+                        alignment: Alignment.center,
+                        height: 60.0,
+                        decoration: new BoxDecoration(
+                            color: Color(0xFF18D191),
+                             borderRadius: new BorderRadius.circular(10.0)
+                        ),
+                        child:  Text("Sign In With Email",
+                             style: TextStyle(fontSize: 20.0,color: Colors.white),
 
+                        ),
                       ),
                     ),
                   ),
