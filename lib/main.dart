@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: new BorderRadius.circular(50.0),
                       color: Color(0xFFFC6A7F),
                   ),
-                  child: new Icon(Icons.local_offer,color: Colors.white),
+                  child: new Icon(Icons.home,color: Colors.white),
                 ),
               ],
             )
