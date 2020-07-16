@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+import 'stacked_icons.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -15,48 +15,70 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            new Stack(
-              alignment: Alignment.center,
+            StackedIcons(),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                new Container(
-                  height: 60.0,
-                  width: 60.0,
-                  decoration: new BoxDecoration(
-                      borderRadius: new BorderRadius.circular(50.0),
-                      color: Color(0xFF18D191)
+                Padding(
+                  padding: const EdgeInsets.only(top:8.0,bottom: 80.0),
+                  child: new Text(
+                    "Quick Bee",
+                    style: TextStyle(fontSize: 30.0),
                   ),
-                  child: new Icon(Icons.local_offer,color: Colors.white),
                 ),
-                new Container(
-                  margin: new EdgeInsets.only(right: 50.0,top: 50.0),
-                  height: 60.0,
-                  width: 60.0,
-                  decoration: new BoxDecoration(
-                    borderRadius: new BorderRadius.circular(50.0),
-                    color: Color(0xFFFC6A7F),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 0.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "Email"
+                ),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 0.0),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                    labelText: "Passowrd",
+                ),
+              ),
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:20.0,right: 10.0,top: 10.0),
+                    child: new Container(
+                      alignment: Alignment.center,
+                      height: 60.0,
+                      decoration: new BoxDecoration(
+                          color: Color(0xFF18D191),
+                          borderRadius: new BorderRadius.circular(10.0)
+                      ),
+                      child:  Text("Login",
+                        style: TextStyle(fontSize: 20.0,color: Colors.white),
+
+                      ),
+                    ),
                   ),
-                  child: new Icon(Icons.home,color: Colors.white),
                 ),
-                new Container(
-                  margin: new EdgeInsets.only(left: 30.0,top: 60.0),
-                  height: 60.0,
-                  width: 60.0,
-                  decoration: new BoxDecoration(
-                    borderRadius: new BorderRadius.circular(50.0),
-                    color: Color(0xFFFFCE56),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:10.0,right: 20.0,top: 10.0),
+                    child: new Container(
+                      alignment: Alignment.center,
+                      height: 60.0,
+                      child:  Text("Fogot Password Link",
+                        style: TextStyle(fontSize: 15.0,color: Color(0xFF18D191),),
+
+                      ),
+                    ),
                   ),
-                  child: new Icon(Icons.local_car_wash,color: Colors.white),
-                ),
-                new Container(
-                  margin: new EdgeInsets.only(left: 80.0,top: 0.0),
-                  height: 60.0,
-                  width: 60.0,
-                  decoration: new BoxDecoration(
-                    borderRadius: new BorderRadius.circular(50.0),
-                    color: Color(0xFF45E0EC),
-                  ),
-                  child: new Icon(Icons.place,color: Colors.white),
-                ),
+                )
+
               ],
             ),
           ],
