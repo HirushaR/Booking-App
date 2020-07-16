@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'stacked_icons.dart';
+import 'main.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -73,7 +74,6 @@ class LoginPage extends StatelessWidget {
                       height: 60.0,
                       child:  Text("Fogot Password Link",
                         style: TextStyle(fontSize: 15.0,color: Color(0xFF18D191),),
-
                       ),
                     ),
                   ),
@@ -81,6 +81,28 @@ class LoginPage extends StatelessWidget {
 
               ],
             ),
+            Expanded(
+              child: GestureDetector(
+
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                },
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: Text("create new Account",
+                        style: TextStyle(color: Color(0xFF18D191),
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
