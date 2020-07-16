@@ -76,6 +76,27 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            new Row(
+              children: <Widget>[
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Container(
+                      alignment: Alignment.center,
+                      height: 60.0,
+                      decoration: new BoxDecoration(
+                          color: Color(0xFF18D191),
+                           borderRadius: new BorderRadius.circular(10.0)
+                      ),
+                      child:  Text("Sign In With Email",
+                           style: TextStyle(fontSize: 20.0,color: Colors.white),
+
+                      ),
+                    ),
+                  ),
+                )
+              ],
             )
           ],
         ),
